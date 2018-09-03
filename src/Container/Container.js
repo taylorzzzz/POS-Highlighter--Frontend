@@ -71,7 +71,7 @@ class Container extends Component {
   submitText = () => {
 
     const url = process.env.NODE_ENV === 'development' ? '/api' 
-      : 'https://pos-highlighter--api.herokuapp.com/';
+      : 'https://pos-highlighter--api.herokuapp.com/api';
 
     const postBody = {
       method: 'POST',
