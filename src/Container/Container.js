@@ -168,6 +168,7 @@ class Container extends Component {
 
   }
   toggleUnderline = () => {
+    console.log('toggleUnderline');
     const underline = this.state.underlineHighlight;
 
     this.setState({ underlineHighlight: !underline }, () => {

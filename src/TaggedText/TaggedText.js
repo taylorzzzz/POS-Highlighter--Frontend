@@ -4,6 +4,8 @@ import './TaggedText.css';
 
 function TaggedText({ markup, underline, toggleUnderline })  {
 
+  console.log('rendering taggedtext');
+  console.log(toggleUnderline);
   return (
     <div className="TaggedText">
 
