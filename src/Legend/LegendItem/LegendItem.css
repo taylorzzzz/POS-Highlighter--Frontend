@@ -1,0 +1,81 @@
+.LegendItem {
+  margin: 5px 0;
+}
+
+.LegendItem.unselected {
+  opacity: .8;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+label {
+  text-transform: capitalize;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  user-select: none;
+}
+
+label::before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: center;
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:hover + label:before {
+  background: #ccc;
+}
+
+input[type="checkbox"] {
+
+  &:checked + label:before {
+    background: #3344aa;
+  }
+
+  &#adjective:checked + label:before {
+    background: var(--color-adjective);
+  }
+
+  &#adverb:checked + label:before {
+    background: var(--color-adverb);
+  }
+  &#conjunction:checked + label:before {
+    background: var(--color-conjunction);
+  }
+  &#determiner:checked + label:before {
+    background: var(--color-determiner);
+  }
+  &#noun:checked + label:before {
+    background: var(--color-noun);
+  }
+  &#number:checked + label:before {
+    background: var(--color-number);
+  }
+  &#other:checked + label:before {
+    background: var(--color-other);
+  }
+  &#preposition:checked + label:before {
+    background: var(--color-preposition);
+  }
+  &#pronoun:checked + label:before {
+    background: var(--color-pronoun);
+  }
+  &#punctuation:checked + label:before {
+    background: var(--color-punctuation);
+  }
+  &#verb:checked + label:before {
+    background: var(--color-verb);
+  }
+
+}
+
+

@@ -1,0 +1,11 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px;
+}
+
+.Legend-Input-Container {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}

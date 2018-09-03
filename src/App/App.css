@@ -1,0 +1,19 @@
+.App {
+    
+}
+
+header {
+    background: var(--color-text);
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px;
+    color: var(--color-bg);
+    border-bottom: 1px solid;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    padding-left: 20px;
+}

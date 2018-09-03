@@ -1,0 +1,35 @@
+@custom-media --small-viewport (min-width: 400px );
+@custom-media --tablet-viewport (min-width: 768px );
+@custom-media --desktop-viewport (min-width: 1024px );
+
+
+
+@media (--small-viewport) {
+    textarea {
+        padding: 20px;
+    }
+}
+@media (--tablet-viewport) {
+    .TaggedText-Container {
+        margin-left: 135px;
+    }
+}
+
+@media (--desktop-viewport) {
+    .Container {
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 5%;
+    }
+    .Legend-Input-Container {
+        min-width: 600px;
+    }
+    .TaggedText-Container {
+        margin-left: 20px;
+    }
+    h1 {
+        /* 
+        font-size: 80px;
+        */
+    }
+}

@@ -1,0 +1,36 @@
+@import '../colors.css';
+
+.InputText {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+textarea {
+  resize: none;
+  padding: 0px;
+  width: 100%;
+  min-height: 80%;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.5em;
+  color: var(--color-text);
+  background: var(--color-bg);
+  outline: none;
+}
+textarea::selection {
+  color: var(--color-bg);
+  background: var(--color-text);
+}
+
+.InputText button {
+  border: 1px solid;
+  padding: 5px 5px;
+  margin-right: 0px;
+}

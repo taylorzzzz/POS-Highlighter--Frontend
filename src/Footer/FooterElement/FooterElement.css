@@ -1,0 +1,16 @@
+.FooterElement {
+    width: 50%;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.FooterElement.full { width: 100% }
+.FooterElement.half { width: 50% }
+.FooterElement.quarter { width: 25% }
+
+.FooterElement:first-child {
+    text-align: left;
+}
+.FooterElement:last-child {
+    text-align: right;
+}

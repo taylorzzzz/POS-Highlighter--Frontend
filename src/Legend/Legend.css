@@ -1,0 +1,28 @@
+@import "../colors.css";
+
+.Legend {
+  padding: 0px;
+  min-width: 125px;
+  font-size: 12px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  display: block;
+  margin: 10px 0;
+  outline: none;
+  font-size: 12px;
+
+  &:hover {
+    color: var(--color-text);
+    transition: .2s all;
+  }
+}

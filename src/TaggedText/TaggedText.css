@@ -1,0 +1,100 @@
+@import '../colors.css';
+
+.TaggedText {  
+  padding: 20px;
+  line-height: 2em;
+  position: relative;
+
+  .adjective { 
+    color: var(--color-adjective);
+    &.underline {
+      border-bottom-color: var(--color-adjective);
+    }
+  }
+
+  .adverb { 
+    color:  var(--color-adverb);
+    &.underline {
+      border-bottom-color: var(--color-adverb);
+    }
+  }
+
+  .conjunction { 
+    color: var(--color-conjunction);
+    &.underline {
+      border-bottom-color: var(--color-conjunction);
+    }
+  }
+
+  .determiner { 
+    color: var(--color-determiner);
+    &.underline {
+      border-bottom-color: var(--color-determiner);
+    }
+  }
+
+  .noun { 
+    color: var(--color-noun);
+    &.underline {
+      border-bottom-color: var(--color-noun);
+    }
+  }
+
+  .number { 
+    color: var(--color-number);
+    &.underline {
+      border-bottom-color: var(--color-number);
+    }
+  }
+
+  .other { 
+    color: var(--color-other);
+    &.underline {
+      border-bottom-color: var(--color-other);
+    }
+  }
+
+  .preposition { 
+    color: var(--color-preposition);
+    &.underline {
+      border-bottom-color: var(--color-preposition);
+    }
+  }
+
+  .pronoun { 
+    color: var(--color-pronoun);
+    &.underline {
+      border-bottom-color: var(--color-pronoun);
+    }
+  }
+
+  .punctuation { 
+    color: var(--color-punctuation);
+    &.underline {
+      border-bottom-color: var(--color-punctuation);
+    }
+  }
+
+  .verb { 
+    color: var(--color-verb);
+    &.underline {
+      border-bottom-color: var(--color-verb);
+    }
+  }
+
+  .underline {
+    border-bottom: 2px solid;
+    color: var(--color-text);
+  }
+  
+}
+
+.grapheme {
+  display: inline;
+}
+
+.underline-toggle {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+}

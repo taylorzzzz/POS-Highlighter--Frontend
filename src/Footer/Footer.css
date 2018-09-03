@@ -1,0 +1,15 @@
+.Footer {
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #aaa;
+    padding: 10px 0 20px;
+}
+
+.Footer a {
+    color: var(--color-text);
+
+}
