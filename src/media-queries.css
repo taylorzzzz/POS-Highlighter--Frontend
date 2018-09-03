@@ -22,7 +22,7 @@
         margin: 5%;
     }
     .Legend-Input-Container {
-        min-width: 600px;
+        width: 50%;
     }
     .TaggedText-Container {
         margin-left: 20px;
