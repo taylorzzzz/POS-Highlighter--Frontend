@@ -13,8 +13,8 @@
 }
 
 
-.edit-button {
-  margin-bottom: 20px;
+.button.edit-button {
+  margin: 0px 0px 20px;
   cursor: pointer;
 }
 
@@ -40,3 +40,9 @@
   color: var(--color-text);
   font-size: 12px;
 }
+
+
+.button .adjective { color: var(--color-adjective)}
+.button .noun { color: var(--color-noun)}
+.button .preposition { color: var(--color-preposition)}
+.button .verb { color: var(--color-verb)}
