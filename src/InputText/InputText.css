@@ -40,12 +40,12 @@ textarea::selection {
 }
 
 .InputText button {
-  color: var(--color-bg);
-  background: var(--color-night);
+  color: var(--color-text);
+  background: var(--color-bg);
   padding: 5px 5px;
   margin-right: 0px;
   margin-top: 10px;
-  border: none;
+  border: 1px solid var(--color-text);
   cursor: pointer;
   transition: all .2s;
   outline: none;
@@ -55,6 +55,8 @@ textarea::selection {
 
 .night .InputText button {
   border: 1px solid;
+  background: var(--color-night);
+  color: var(--color-bg);
 }
 
 .InputText button:active {
