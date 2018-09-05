@@ -41,7 +41,7 @@ class Container extends Component {
   // Color Edit
   toggleEdit = () => {
     this.setState({editActive: !this.state.editActive}, () => {
-      if (this.state.editActive) this.selectAll();
+      // if (this.state.editActive) this.selectAll(true);
     });
   }
   changeColor = (pos, color) => {
@@ -49,14 +49,11 @@ class Container extends Component {
 
     const newLegend = { ...this.state.legend };
     newLegend[pos].color = colorHex;
+    newLegend[pos].selected = true;
 
-    this.setState({legend: newLegend});
+    this.updateLegend(newLegend);
 
     this.updateColorVariableCSS(pos, colorHex);
-
-    // Now we have it so that we can change the color. The
-    // final thing we need to do is handle closing the 
-    // color picker. 
 
   }
   updateColorVariableCSS = (pos, color) => {
@@ -84,7 +81,6 @@ class Container extends Component {
   // Other Legend Functions 
   toggleLegendSelection = (e) => {
 
-
     const pos = e.currentTarget.getAttribute('data-pos');
 
     if (this.state.editActive) {
@@ -99,6 +95,8 @@ class Container extends Component {
     
   }
   deselectAll = () => {
+    this.closeEditIfOpen();
+
     const newLegend = { ...this.state.legend };
 
     for (let category in newLegend) {
@@ -108,6 +106,8 @@ class Container extends Component {
     this.updateLegend(newLegend);
   }
   selectAll = () => {
+    this.closeEditIfOpen();
+    
     const newLegend = { ...this.state.legend };
 
     for (let category in newLegend) {
@@ -117,6 +117,7 @@ class Container extends Component {
     this.updateLegend(newLegend);
   }
   selectDefaults = () => {
+    this.closeEditIfOpen();
 
     const newLegend = { ...this.state.legend };
 
@@ -133,12 +134,15 @@ class Container extends Component {
   updateLegend = (newLegend) => {
 
     this.setState({ legend: newLegend }, () => {
-
+      
       if (Object.keys(this.state.taggedText).length) {
         this.createMarkup(this.state.taggedText);
       }
     });
 
+  }
+  closeEditIfOpen = () => {
+    if (this.state.editActive) this.toggleEdit();
   }
 
   /* TEXT INPUT AND OUTPUT FUNCTIONS */
@@ -147,6 +151,7 @@ class Container extends Component {
     this.setState({ text: text });
   }
   submitText = () => {
+    this.closeEditIfOpen();
 
     const url = process.env.NODE_ENV === 'development' ? '/api' 
       : 'https://pos-highlighter--api.herokuapp.com/api';
@@ -246,6 +251,8 @@ class Container extends Component {
 
   }
   toggleUnderline = () => {
+    this.closeEditIfOpen();
+    
     const underline = this.state.underlineHighlight;
 
     this.setState({ underlineHighlight: !underline }, () => {
