@@ -1,23 +1,51 @@
 import React from 'react';
+import { SketchPicker } from 'react-color';
 
 import './LegendItem.css';
 
-function LegendItem({ pos, selected, toggleSelection }) {
+function LegendItem({ 
+    pos, 
+    item, 
+    toggleSelection, 
+    editActive, 
+    changeColor,
+    handleClose }) {
 
-  const unselected = selected ? '' : 'unselected';
-  const classes = `${unselected} LegendItem`;
-
+  const unselected = item.selected ? '' : 'unselected';
+  const edit = editActive ? 'editActive' : '';
+  const classes = `${unselected} ${edit} LegendItem`;
+  
+  const popover = {
+    position: 'absolute',
+    zIndex: '2',
+  };
+  const cover = {
+    position: 'fixed',
+    top: '0px',
+    right: '0px',
+    bottom: '0px',
+    left: '0px'
+  };
   return (
     <div className={classes}>
-
+      
       <input 
         type="checkbox"  
-        checked={ selected }
-        onChange={ toggleSelection }
+        checked={ item.selected }
+        onChange={ toggleSelection}
         data-pos={ pos }
         id={ pos }/>
 
       <label htmlFor={ pos }>{ pos }</label>
+
+      {
+        item.beingEdited
+          ? <div style={ popover }>
+              <div style={ cover } onClick={() => handleClose(pos)}></div>
+                <SketchPicker color={item.color} onChangeComplete={(color) => changeColor(pos, color)}/> 
+            </div>
+          : null
+      }
 
     </div>
   )

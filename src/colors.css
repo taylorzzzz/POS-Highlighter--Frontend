@@ -1,17 +1,19 @@
 :root {
   --color-bg: #fff;
   --color-text: #333;
-  --color-main: #09aaf0;
-
-  --color-adjective: rgb(9, 185, 118);
+  --color-text-disabled: #bbb;
+  
+  --color-disabled: #eaeaea;
+  
+  --color-adjective: #09B976;
   --color-adverb: #93A3D9;
-  --color-conjunction: #f046ff;
-  --color-determiner: rgb(11, 206, 206);
-  --color-noun: #ec1c38;
-  --color-number: rgb(72, 3, 128);
-  --color-other: #AAA;
+  --color-conjunction: #F046FF;
+  --color-determiner: #0bCECE;
+  --color-noun: #EC1C38;
+  --color-number: #480380;
+  --color-other: #AAAAAA;
   --color-preposition: #F0CA4D;
   --color-pronoun: #E37B40;
   --color-punctuation: #380447;
-  --color-verb: rgb(50, 120, 250);
+  --color-verb: #3278FA;
 }

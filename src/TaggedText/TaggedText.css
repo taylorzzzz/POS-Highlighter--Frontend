@@ -1,7 +1,7 @@
 @import '../colors.css';
 
 .TaggedText {  
-  padding: 20px;
+  padding: 40px 20px 20px;
   line-height: 2em;
   position: relative;
 
@@ -95,6 +95,6 @@
 
 .underline-toggle {
   position: absolute;
-  top: -20px;
-  right: 20px;
+  top: 0px;
+  left: 20px;
 }

@@ -1,10 +1,15 @@
 .LegendItem {
   margin: 5px 0;
+  transition: color .2s;
 }
 
-.LegendItem.unselected {
-  opacity: .8;
+.LegendItem.editActive label {
+  color: var(--color-text-disabled);
 }
+.LegendItem.unselected {
+  color: var(--color-text-disabled);
+}
+
 
 input[type="checkbox"] {
   position: absolute;
@@ -24,10 +29,10 @@ label::before {
   content: '';
   margin-right: 10px;
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
   width: 10px;
   height: 10px;
-  background: #ddd;
+  background: var(--color-disabled);
   border-radius: 100%;
 }
 

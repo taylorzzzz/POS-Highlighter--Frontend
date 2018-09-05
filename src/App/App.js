@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
 
         <header>
-          <h1>Parts of Speech Highlighter</h1>
+          <h1>Part of Speech Highlighter</h1>
         </header>
       
         <Container />

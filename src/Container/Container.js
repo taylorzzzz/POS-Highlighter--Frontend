@@ -14,19 +14,80 @@ class Container extends Component {
 
   constructor(props) {
     super(props);
+
+    const defaultSelections = [];
+    
+    for (let pos in legendData) {
+      if (legendData[pos].selected) defaultSelections.push(pos);
+    }
+
     this.state = {
-      legend: legendData,
+      legend: Object.assign({}, legendData),
+      defaultSelections: defaultSelections,
       text: initialText,
       taggedText: {},
       markup: [],
       underlineHighlight: false,
+      editActive: false,
       
     }
   }
 
   /* LEGEND FUNCTIONS */
+
+  // Color Edit
+  toggleEdit = () => {
+    this.setState({editActive: !this.state.editActive}, () => {
+      if (this.state.editActive) this.selectAll();
+    });
+  }
+  changeColor = (pos, color) => {
+    const colorHex = color.hex;
+
+    const newLegend = { ...this.state.legend };
+    newLegend[pos].color = colorHex;
+
+    this.setState({legend: newLegend});
+
+    this.updateColorVariableCSS(pos, colorHex);
+
+    // Now we have it so that we can change the color. The
+    // final thing we need to do is handle closing the 
+    // color picker. 
+
+  }
+  updateColorVariableCSS = (pos, color) => {
+
+    const varName = `--color-${pos}`;
+
+    document.documentElement.style.setProperty(varName, color);
+  }
+  showPicker = (pos) => {
+
+    const newLegend = { ...this.state.legend };
+    newLegend[pos].beingEdited = true;
+
+    this.setState({ legend: newLegend });
+    
+  }
+  closePicker = (pos) => {
+    const newLegend = { ...this.state.legend };
+    newLegend[pos].beingEdited = false;
+
+    this.setState({ legend: newLegend });
+    //this.toggleEdit();
+  }
+  
+  // Other Legend Functions 
   toggleLegendSelection = (e) => {
+
+
     const pos = e.currentTarget.getAttribute('data-pos');
+
+    if (this.state.editActive) {
+      this.showPicker(pos);
+      return;
+    }
   
     const newLegend = { ...this.state.legend };
     newLegend[pos].selected = !newLegend[pos].selected
@@ -48,6 +109,20 @@ class Container extends Component {
 
     for (let category in newLegend) {
       newLegend[category].selected = true;
+    }
+
+    this.updateLegend(newLegend);
+  }
+  selectDefaults = () => {
+
+    const newLegend = { ...this.state.legend };
+
+    for (let category in newLegend) {
+
+      newLegend[category].selected = 
+        this.state.defaultSelections.indexOf(category) !== -1
+          ? true
+          : false;
     }
 
     this.updateLegend(newLegend);
@@ -195,7 +270,13 @@ class Container extends Component {
             items={this.state.legend}
             toggleSelection={ this.toggleLegendSelection }
             deselectAll={ this.deselectAll }
-            selectAll={ this.selectAll }/>
+            selectAll={ this.selectAll }
+            selectDefaults={ this.selectDefaults }
+            
+            editActive={this.state.editActive}
+            toggleEdit={ this.toggleEdit }
+            changeColor={ this.changeColor }
+            handleClose={ this.closePicker }/>
 
           <InputText 
             text={this.state.text}
