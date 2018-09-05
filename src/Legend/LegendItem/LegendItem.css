@@ -11,12 +11,12 @@
 }
 
 
-input[type="checkbox"] {
+.dot input[type="checkbox"] {
   position: absolute;
   opacity: 0;
 }
 
-label {
+.dot label {
   text-transform: capitalize;
   font-size: 14px;
   position: relative;
@@ -25,7 +25,7 @@ label {
   user-select: none;
 }
 
-label::before {
+.dot label::before {
   content: '';
   margin-right: 10px;
   display: inline-block;
@@ -36,11 +36,11 @@ label::before {
   border-radius: 100%;
 }
 
-input[type="checkbox"]:hover + label:before {
+.dot input[type="checkbox"]:hover + label:before {
   background: #ccc;
 }
 
-input[type="checkbox"] {
+.dot input[type="checkbox"] {
 
   &:checked + label:before {
     background: #3344aa;

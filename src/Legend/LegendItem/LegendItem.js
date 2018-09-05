@@ -13,7 +13,7 @@ function LegendItem({
 
   const unselected = item.selected ? '' : 'unselected';
   const edit = editActive ? 'editActive' : '';
-  const classes = `${unselected} ${edit} LegendItem`;
+  const classes = `${unselected} ${edit} LegendItem dot`;
   
   const popover = {
     position: 'absolute',

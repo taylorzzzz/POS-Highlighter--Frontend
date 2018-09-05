@@ -58,10 +58,8 @@ function Legend({
 
         <div className="button" onClick={selectDefaults}>
           <i className="material-icons">autorenew</i>
-          <span>Select Defaults  -  
-            <span className="adjective"> Adj</span>,
-            <span className="noun"> N</span>, 
-            <span className="preposition"> Prep</span>, 
+          <span>Select Defaults:  
+            <span className="noun"> N</span>
             <span className="verb"> V</span>
           </span>
         </div>

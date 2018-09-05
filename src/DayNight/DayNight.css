@@ -1,0 +1,49 @@
+.DayNight {
+
+}
+
+.DayNight label {
+    outline: 0;
+    background: var(--color-disabled);
+    display: block;
+    width: 3em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2em;
+    padding: 5px;
+    transition: all .4s ease;
+}
+.DayNight label:before,
+.DayNight label:after {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+}
+
+.DayNight label:after {
+    left: 0;
+    border-radius: 50%;
+    background: var(--color-text);
+    transition: all .2s ease;
+    
+}
+.DayNight label:before {
+    display: none;
+}
+
+#toggle-btn:checked + label {
+    background: var(--color-text);
+}
+#toggle-btn:checked + label:after {
+    left: 50%;
+    background: var(--color-bg);
+}
+
+#toggle-btn {
+    display: none;
+}
+

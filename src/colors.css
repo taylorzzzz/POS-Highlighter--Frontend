@@ -1,6 +1,7 @@
 :root {
   --color-bg: #fff;
-  --color-text: #333;
+  --color-night: #202124;
+  --color-text: #5f6368;
   --color-text-disabled: #bbb;
   
   --color-disabled: #eaeaea;

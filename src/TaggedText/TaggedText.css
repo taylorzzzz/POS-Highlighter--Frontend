@@ -4,6 +4,7 @@
   padding: 40px 20px 20px;
   line-height: 2em;
   position: relative;
+  letter-spacing: .05em;
 
   .adjective { 
     color: var(--color-adjective);
@@ -83,8 +84,8 @@
   }
 
   .underline {
-    border-bottom: 2px solid;
-    color: var(--color-text);
+    border-bottom: 1px solid;
+    color: inherit;
   }
   
 }

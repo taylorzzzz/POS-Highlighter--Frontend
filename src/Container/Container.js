@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import DayNight from '../DayNight/DayNight';
+import Footer from '../Footer/Footer';
+import FooterElement from '../Footer/FooterElement/FooterElement';
 import Legend from '../Legend/Legend';
 import TaggedText from '../TaggedText/TaggedText';
 import InputText from '../InputText/InputText';
@@ -29,7 +32,7 @@ class Container extends Component {
       markup: [],
       underlineHighlight: false,
       editActive: false,
-      
+      dayToggled: true,
     }
   }
 
@@ -243,7 +246,6 @@ class Container extends Component {
 
   }
   toggleUnderline = () => {
-    console.log('toggleUnderline');
     const underline = this.state.underlineHighlight;
 
     this.setState({ underlineHighlight: !underline }, () => {
@@ -260,39 +262,69 @@ class Container extends Component {
   }
 
 
+  toggleDayNight = () => {
+    this.setState({dayToggled: !this.state.dayToggled});
+  }
+
   render() {
 
+    const night = this.state.dayToggled ? '' : 'night';
+    const classes = `Container ${night}`;
+
     return (
-      <div className="Container">
-      
-        <div className="Legend-Input-Container">
-          <Legend 
-            items={this.state.legend}
-            toggleSelection={ this.toggleLegendSelection }
-            deselectAll={ this.deselectAll }
-            selectAll={ this.selectAll }
-            selectDefaults={ this.selectDefaults }
-            
-            editActive={this.state.editActive}
-            toggleEdit={ this.toggleEdit }
-            changeColor={ this.changeColor }
-            handleClose={ this.closePicker }/>
+      <div className={classes}>
 
-          <InputText 
-            text={this.state.text}
-            handleTextChange={this.handleTextChange}
-            submitText={this.submitText}/>
-        </div>
+        <header>
+          <h1>Part of Speech Highlighter</h1>
+          <DayNight 
+            toggleDayNight={this.toggleDayNight}
+            dayToggled={this.state.dayToggled}/>
+        </header>
+        
+        <div className="Content-Container">
+          <div className="Legend-Input-Container">
+            <Legend 
+              items={this.state.legend}
+              toggleSelection={ this.toggleLegendSelection }
+              deselectAll={ this.deselectAll }
+              selectAll={ this.selectAll }
+              selectDefaults={ this.selectDefaults }
+              
+              editActive={this.state.editActive}
+              toggleEdit={ this.toggleEdit }
+              changeColor={ this.changeColor }
+              handleClose={ this.closePicker }/>
 
-        <div className="TaggedText-Container">
-          <TaggedText 
-            taggedText={this.state.taggedText} 
-            markup={this.state.markup}
-            underline={this.state.underlineHighlight}
-            toggleUnderline={this.toggleUnderline}/>
+            <InputText 
+              text={this.state.text}
+              handleTextChange={this.handleTextChange}
+              submitText={this.submitText}/>
+          </div>
+
+          <div className="TaggedText-Container">
+            <TaggedText 
+              taggedText={this.state.taggedText} 
+              markup={this.state.markup}
+              underline={this.state.underlineHighlight}
+              toggleUnderline={this.toggleUnderline}/>
+          </div>
+        
         </div>
         
       
+        <Footer>
+
+          <FooterElement classes={['half']}>
+            <p>This site uses the <a href="https://www.npmjs.com/package/wink-pos-tagger">wink-pos-tagger</a> library 
+            to tag the different parts of speech. 
+            </p>
+          </FooterElement>
+
+          <FooterElement classes={['quarter']}>
+            <p>Created By <a href="https://twward.com">Taylor Ward</a></p>
+          </FooterElement> 
+
+          </Footer>
       </div>
     )
     

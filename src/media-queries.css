@@ -16,7 +16,7 @@
 }
 
 @media (--desktop-viewport) {
-    .Container {
+    .Content-Container {
         flex-direction: row;
         align-items: flex-start;
         margin: 5%;

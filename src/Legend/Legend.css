@@ -37,7 +37,7 @@
 .button span {
   padding: 0;
   cursor: pointer;
-  color: var(--color-text);
+  color: inherit;
   font-size: 12px;
 }
 

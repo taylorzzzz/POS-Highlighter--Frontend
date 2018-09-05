@@ -9,7 +9,7 @@ function TaggedText({ markup, underline, toggleUnderline })  {
 
       { markup }
 
-      <div className="underline-toggle">
+      <div className="underline-toggle dot">
         <input 
           type="checkbox"
           checked={ underline }

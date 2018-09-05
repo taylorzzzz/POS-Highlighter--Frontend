@@ -1,6 +1,6 @@
 const legendItemsDefaults = {
   adjective: {
-    selected: true,
+    selected: false,
     beingEdited: false
   },
   adverb: {
@@ -28,7 +28,7 @@ const legendItemsDefaults = {
     beingEdited: false
   },
   preposition: {
-    selected: true,
+    selected: false,
     beingEdited: false
   },
   pronoun: {

@@ -1,9 +1,46 @@
 .Container {
-    display: flex;
-    flex-direction: column;
-    margin: 50px 20px;
+    color: var(--color-text);
+    transition: all .3s;
+}
+.Container.night {
+    color: var(--color-bg);
+    background: var(--color-night);
 }
 
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-bg);
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .05), 
+    0 4px 5px 0 rgba(0, 0, 0, .04), 
+    0 1px 10px 0 rgba(0, 0, 0, .02)
+}
+header h1 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 20px;
+    text-align: left;
+    font-weight: 300;
+}
+
+.night header {
+    background: var(--color-night);
+    border-bottom: 1px solid var(--color-text-disabled);
+}
+.night header h1 {
+    color: var(--color-bg);
+}
+
+/* Content Container */
+
+.Content-Container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
 .Legend-Input-Container {
     width: 100%;
     display: flex;
