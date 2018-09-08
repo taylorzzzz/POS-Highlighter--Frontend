@@ -1,6 +1,6 @@
 .Container {
     color: var(--color-text);
-    transition: all .3s;
+    transition: all .2s;
 }
 .Container.night {
     color: var(--color-bg);
