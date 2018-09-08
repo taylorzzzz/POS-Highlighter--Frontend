@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LegendItem renders properly 1`] = `
+<div
+  className="unselected  LegendItem dot"
+>
+  <input
+    checked={undefined}
+    data-pos={undefined}
+    id={undefined}
+    onChange={undefined}
+    type="checkbox"
+  />
+  <label
+    htmlFor={undefined}
+  />
+</div>
+`;

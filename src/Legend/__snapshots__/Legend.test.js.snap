@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Legend renders properly 1`] = `
+<div
+  className="Legend"
+>
+  <div
+    className="edit-button button"
+    onClick={undefined}
+  >
+    <i
+      className="material-icons"
+    >
+      edit
+    </i>
+    <span>
+      Edit
+    </span>
+  </div>
+  <div
+    className="select-buttons"
+  >
+    <div
+      className="button select-all-btn"
+      onClick={undefined}
+    >
+      <i
+        className="material-icons"
+      >
+        select_all
+      </i>
+      <span>
+        Select All
+      </span>
+    </div>
+    <div
+      className="button deselect-all-btn"
+      onClick={undefined}
+    >
+      <i
+        className="material-icons"
+      >
+        clear_all
+      </i>
+      <span>
+        Deselect All
+      </span>
+    </div>
+    <div
+      className="button select-defaults-btn"
+      onClick={undefined}
+    >
+      <i
+        className="material-icons"
+      >
+        autorenew
+      </i>
+      <span>
+        Select Defaults:
+        <span
+          className="noun"
+        >
+           N
+        </span>
+        <span
+          className="verb"
+        >
+           V
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -5,7 +5,7 @@ import LegendItem from './LegendItem/LegendItem';
 import './Legend.css';
 
 function Legend({ 
-    items, 
+    items = {}, 
     toggleSelection, 
     deselectAll,
     selectAll,
@@ -46,17 +46,17 @@ function Legend({
 
       <div className="select-buttons">
 
-        <div className="button" onClick={selectAll}>
+        <div className="button select-all-btn" onClick={selectAll}>
           <i className="material-icons">select_all</i>
           <span>Select All</span>
         </div>
 
-        <div className="button" onClick={deselectAll}>
+        <div className="button deselect-all-btn" onClick={deselectAll}>
           <i className="material-icons">clear_all</i>
           <span>Deselect All</span>
         </div>
 
-        <div className="button" onClick={selectDefaults}>
+        <div className="button select-defaults-btn" onClick={selectDefaults}>
           <i className="material-icons">autorenew</i>
           <span>Select Defaults:  
             <span className="noun"> N</span>

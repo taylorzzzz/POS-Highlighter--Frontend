@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaggedText renders properly 1`] = `
+<div
+  className="TaggedText"
+>
+  <div
+    className="underline-toggle dot"
+  >
+    <input
+      checked={undefined}
+      id="underline"
+      onChange={undefined}
+      type="checkbox"
+    />
+    <label
+      htmlFor="underline"
+    >
+      Underline
+    </label>
+  </div>
+</div>
+`;

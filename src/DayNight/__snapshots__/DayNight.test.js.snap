@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DayNight renders properly 1`] = `
+<div
+  className="DayNight"
+>
+  <input
+    checked={undefined}
+    id="toggle-btn"
+    onChange={undefined}
+    type="checkbox"
+  />
+  <label
+    htmlFor="toggle-btn"
+  />
+</div>
+`;

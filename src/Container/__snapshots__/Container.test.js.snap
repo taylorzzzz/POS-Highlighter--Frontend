@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders properly 1`] = `
+<div
+  className="Container "
+>
+  <header>
+    <h1>
+      Part of Speech Highlighter
+    </h1>
+    <div
+      className="DayNight"
+    >
+      <input
+        checked={true}
+        id="toggle-btn"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor="toggle-btn"
+      />
+    </div>
+  </header>
+  <div
+    className="Content-Container"
+  >
+    <div
+      className="Legend-Input-Container"
+    >
+      <div
+        className="Legend"
+      >
+        <div
+          className="edit-button button"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons"
+          >
+            edit
+          </i>
+          <span>
+            Edit
+          </span>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="adjective"
+            id="adjective"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="adjective"
+          >
+            adjective
+          </label>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="adverb"
+            id="adverb"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="adverb"
+          >
+            adverb
+          </label>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="conjunction"
+            id="conjunction"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="conjunction"
+          >
+            conjunction
+          </label>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="determiner"
+            id="determiner"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="determiner"
+          >
+            determiner
+          </label>
+        </div>
+        <div
+          className="  LegendItem dot"
+        >
+          <input
+            checked={true}
+            data-pos="noun"
+            id="noun"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="noun"
+          >
+            noun
+          </label>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="number"
+            id="number"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="number"
+          >
+            number
+          </label>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="other"
+            id="other"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="other"
+          >
+            other
+          </label>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="preposition"
+            id="preposition"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="preposition"
+          >
+            preposition
+          </label>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="pronoun"
+            id="pronoun"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="pronoun"
+          >
+            pronoun
+          </label>
+        </div>
+        <div
+          className="unselected  LegendItem dot"
+        >
+          <input
+            checked={false}
+            data-pos="punctuation"
+            id="punctuation"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="punctuation"
+          >
+            punctuation
+          </label>
+        </div>
+        <div
+          className="  LegendItem dot"
+        >
+          <input
+            checked={true}
+            data-pos="verb"
+            id="verb"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="verb"
+          >
+            verb
+          </label>
+        </div>
+        <div
+          className="select-buttons"
+        >
+          <div
+            className="button select-all-btn"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons"
+            >
+              select_all
+            </i>
+            <span>
+              Select All
+            </span>
+          </div>
+          <div
+            className="button deselect-all-btn"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons"
+            >
+              clear_all
+            </i>
+            <span>
+              Deselect All
+            </span>
+          </div>
+          <div
+            className="button select-defaults-btn"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons"
+            >
+              autorenew
+            </i>
+            <span>
+              Select Defaults:
+              <span
+                className="noun"
+              >
+                 N
+              </span>
+              <span
+                className="verb"
+              >
+                 V
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="InputText"
+      >
+        <textarea
+          autoFocus="true"
+          onChange={[Function]}
+          value="Write or paste some text in this box and click highlight to see the different parts of speech highlighted. 
+        
+        The checkboxes to the left allow you to turn on or off highlighting for the different parts of speech. Click the edit button to change their colors.
+        
+        You can also toggle underlining using the Underline checkbox above the output."
+        />
+        <button
+          onClick={[Function]}
+        >
+          Highlight
+        </button>
+      </div>
+    </div>
+    <div
+      className="TaggedText-Container"
+    >
+      <div
+        className="TaggedText"
+      >
+        <div
+          className="underline-toggle dot"
+        >
+          <input
+            checked={false}
+            id="underline"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            htmlFor="underline"
+          >
+            Underline
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="Footer"
+  >
+    <div
+      className="half FooterElement"
+    >
+      <p>
+        This site uses the 
+        <a
+          href="https://www.npmjs.com/package/wink-pos-tagger"
+        >
+          wink-pos-tagger
+        </a>
+         library to tag the different parts of speech.
+      </p>
+    </div>
+    <div
+      className="quarter FooterElement"
+    >
+      <p>
+        Created By 
+        <a
+          href="https://twward.com"
+        >
+          Taylor Ward
+        </a>
+      </p>
+    </div>
+  </footer>
+</div>
+`;

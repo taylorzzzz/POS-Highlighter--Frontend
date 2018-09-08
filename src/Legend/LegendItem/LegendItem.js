@@ -5,7 +5,7 @@ import './LegendItem.css';
 
 function LegendItem({ 
     pos, 
-    item, 
+    item = {}, 
     toggleSelection, 
     editActive, 
     changeColor,

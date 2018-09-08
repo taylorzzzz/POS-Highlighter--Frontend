@@ -48,8 +48,8 @@ const legendItemsDefaults = {
 
 
 function getColor(pos) {
-  
-  var style = getComputedStyle(document.body);
+  // This runs in the browser.
+  var style = window.getComputedStyle(document.body);
   var color = style.getPropertyValue(`--color-${pos}`);
 
   return color.trim();
