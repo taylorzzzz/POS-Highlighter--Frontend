@@ -6,7 +6,6 @@ import './App.css';
 import '../colors.css';
 
 class App extends Component {
-
   
   render() {
 
